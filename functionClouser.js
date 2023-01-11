@@ -6,3 +6,15 @@
 
 // Local variables have short lives. They are created when the function is invoked, and deleted when the function is finished.
 //A closure is a function having access to the parent scope, even after the parent function has closed.
+
+function temporary() {
+  let counter = 0
+  return function () {
+    counter += 1
+  }
+}
+const add = temporary()
+console.dir(add)
+add()
+add()
+add()
