@@ -54,11 +54,7 @@ function progress() {
 
 function getCertificate() {
   console.log("Preparing your certificate!")
-  const promise = new Promise(function (resolve) {
-    setTimeout(() => {
-      resolve("Congrats! YOu got the certificate")
-    }, 1000)
-  })
+  const promise = Promise.resolve("Congrats! YOu got the certificate")
   return promise
 }
 
